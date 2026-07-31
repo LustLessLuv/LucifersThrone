@@ -171,7 +171,7 @@ public class OptionsDialogue {
 				 }
 				
 			} else if (index == 2) {
-				return new Response("Save/Load", "Open the save/load game window.", SAVE_LOAD){
+				return new Response("Save/Load", "save/load game", SAVE_LOAD){
 					@Override
 					public void effects() {
 						loadConfirmationName = ""; overwriteConfirmationName = ""; deleteConfirmationName = "";
@@ -180,7 +180,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Export character", "Open the character export game window.", IMPORT_EXPORT){
+				return new Response("Export character", "Open character export window.", IMPORT_EXPORT){
 					@Override
 					public void effects() {
 						loadConfirmationName = ""; overwriteConfirmationName = ""; deleteConfirmationName = "";
@@ -189,7 +189,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 4) {
-				return new Response("Disclaimer", "View the game's disclaimer.", DISCLAIMER){
+				return new Response("Disclaimer", "View disclaimer.", DISCLAIMER){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -197,7 +197,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 5) {
-				return new ResponseEffectsOnly("Quit", "Quits your current game and closes the program.<br/><br/><b>Remember to save your game first!</b>"){
+				return new ResponseEffectsOnly("Quit", "Quit game, close program.<br/><br/><b>Remember to save your game first!</b>"){
 					@Override
 					public void effects() {
 						Main.primaryStage.close();
@@ -216,7 +216,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 7) {
-				return new Response("Content Options", "Set your preferred content settings.", MISCELLANEOUS){
+				return new Response("Content Options", "Set preferred content settings.", MISCELLANEOUS){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -224,10 +224,10 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 8) {
-				return new Response("Patch notes", "View the patch notes for this version.", PATCH_NOTES);
+				return new Response("Patch notes", "Patch notes for current version.", PATCH_NOTES);
 			
 			} else if (index == 9) {
-				return new Response("Credits", "View the game's credits screen.", CREDITS);
+				return new Response("Credits", "Credits screen.", CREDITS);
 				
 			} else if (index == 11) {
 				return new ResponseEffectsOnly("Blog", "Opens the page:<br/><br/><i>https://lilithsthrone.blogspot.co.uk/</i><br/><br/><b>Externally in your default browser.</b>"){
@@ -258,7 +258,7 @@ public class OptionsDialogue {
 			
 			} else if (index == 0) {
 				if(Main.game.isStarted()) {
-					return new ResponseEffectsOnly("Resume", "Return to whatever you were doing before opening this menu."){
+					return new ResponseEffectsOnly("Resume", "Return to game."){
 						@Override
 						public void effects() {
 							Main.mainController.openOptions();
@@ -269,7 +269,7 @@ public class OptionsDialogue {
 					
 				} else {
 					if(Main.isLoadGameAvailable(Main.getProperties().lastSaveLocation)) {
-						return new ResponseEffectsOnly("Resume", "Continue playing from your last save."){
+						return new ResponseEffectsOnly("Resume", "Continue from last save."){
 							@Override
 							public void effects() {
 								Main.loadGame(Main.getProperties().lastSaveLocation);
