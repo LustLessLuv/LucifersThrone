@@ -608,14 +608,9 @@ public class CharacterCreation {
 		@Override
 		public String getHeaderContent() {
 			return "<p>"
-						+ "By the time the taxi finally pulls up to the British Museum, you're already almost five minutes late."
-						+ " The whole reason you're visiting London is to attend your aunt Lily's opening evening for her new exhibition,"
-							+ " and as you hurriedly pay the driver his fare and step out of the car, you hope that she hasn't started her speech yet."
-					+ "</p>"
-					+ "<p>"
-						+ "The street lights flicker into life as you rush over to the entrance, illuminating your surroundings with a dull orange glow."
-						+ " It only takes a moment before you're standing at the museum's front doors, where, much to your dismay, you see that a small queue has formed."
-						+ " Having no choice but to step in line and wait your turn, you briefly glance over at the large glass windows of the building's modern facade to see your blurry reflection in the glass..."
+						+ "Already late to Aunt Lily's speech, at her new exhibition, in the British Museum. You rush to the entrance."
+						+ "A line is forming outside as people swarm and push you into its ranks."
+						+ "Stuck. Trying to look in, but only seeing your reflection through the windows."
 					+ "</p>"
 					+ "<br/>"
 					
