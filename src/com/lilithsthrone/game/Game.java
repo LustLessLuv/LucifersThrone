@@ -429,15 +429,9 @@ public class Game implements XMLSaving {
 		itemGeneration = new ItemGeneration();
 		characterUtils = new CharacterUtils();
 		OccupantManagementDialogue.resetImportantCells();
-		startingDate = LocalDateTime.of(
-				2019, // LocalDateTime.now().getYear(),
-				LocalDateTime.now().getMonth(),
-				// Handle leap years by just rolling the starting date back to the 28th (as 2019 is not a leap year):
-				LocalDateTime.now().getMonth()==Month.FEBRUARY && LocalDateTime.now().getDayOfMonth()==29
-					?28
-					:LocalDateTime.now().getDayOfMonth(),
-				00,
-				00);
+		LocalDate today = LocalDate.now();
+		startingDate = today.atStartOfDay();
+
 		secondsPassed = TIME_START_SECONDS;
 		inCombat = false;
 		inSex = false;
