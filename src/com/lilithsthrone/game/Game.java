@@ -361,6 +361,7 @@ public class Game implements XMLSaving {
 	private long lastAutoSaveTime = 0;
 	private long secondsPassed; // Seconds passed since the start of the game
 	private LocalDateTime startingDate;
+	private LocalDate today;
 	
 	private boolean renderAttributesSection;
 	private boolean renderMap;
@@ -429,7 +430,7 @@ public class Game implements XMLSaving {
 		itemGeneration = new ItemGeneration();
 		characterUtils = new CharacterUtils();
 		OccupantManagementDialogue.resetImportantCells();
-		LocalDate today = LocalDate.now();
+		today = LocalDate.now();
 		startingDate = today.atStartOfDay();
 
 		secondsPassed = TIME_START_SECONDS;
